@@ -43,7 +43,7 @@ client.on(Events.InteractionCreate, async interaction => {
 
 	if (interaction.customId == `answer-done`) {
 		logger.info(`🤌`);
-		const command = client.commands.get(`quiz`);
+		const command = client.commands.get(`study`);
 		try {
 			await command.execute(interaction);
 		} catch (error) {
