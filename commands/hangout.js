@@ -26,7 +26,7 @@ module.exports = {
                 .setRequired(true))
         .addIntegerOption(option =>
             option.setName('expires')
-                .setDescription('When should the invite expire in minutes')
+                .setDescription('When is the invite gong to expire? (in minutes)')
                 .setRequired(true))
         .addBooleanOption(option =>
             option.setName('hidden')

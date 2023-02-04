@@ -33,7 +33,11 @@ const readFile = util.promisify(fs.readFile);
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName(`game`)
-		.setDescription(`Let's play a game!`),
+		.setDescription(`Let's play a game!`)        
+        .addIntegerOption(option =>
+            option.setName('expires')
+                .setDescription('When should the game round expire? (in seconds)')
+                .setRequired(true)),
 	async execute(interaction) {
         const data = await readFile(`GPTquestions.json`);
         const questions = JSON.parse(data);
@@ -44,6 +48,7 @@ module.exports = {
         const answer = randomQuestion.answer;
         const explanation  = randomQuestion.explanation;
         const answerLetter = String.fromCharCode(65 + answer);
+        const expires = interaction.options.getInteger(`expires`);
 
         let message = `${question}\n\n`;
         let answerButtons = new ActionRowBuilder();
@@ -60,7 +65,7 @@ module.exports = {
             )
         });
 
-        const collector = interaction.channel.createMessageComponentCollector({ time: 42000 });
+        const collector = interaction.channel.createMessageComponentCollector({ time: expires * 1000 });
 
         collector.on('collect', async interaction => {
             const answerOption = options[answer];
