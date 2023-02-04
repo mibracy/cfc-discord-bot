@@ -23,6 +23,6 @@ module.exports = {
 		const ephemeral = interaction.options.getBoolean('public');
 		const id = user?.id;
 		const count = data?.split(`${id} IS STUDYING`).length - 1;
-		await interaction.editReply({content: `<@${interaction.user.id}> 👀 Noisy little shit are't you!\n\n<@${id}> has studied ${count} questions!`, ephemeral: !ephemeral});
+		await interaction.editReply({content: `<@${interaction.user.id}> 👀 Nosey little shit aren't you!\n\n<@${id}> has studied ${count} questions!`, ephemeral: !ephemeral});
 	},
 };
