@@ -86,6 +86,6 @@ module.exports = {
         });
 
         await interaction.reply({ content: message, components: [answerButtons], ephemeral: true });
-        logger.info(`${interaction.user.id} IS STUDING!`);
+        logger.info(`${interaction.user.id} IS STUDYING!`);
 	},
 };
