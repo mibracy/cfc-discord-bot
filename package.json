@@ -1,13 +1,15 @@
 {
-  "name": "discord-quiz-bot",
+  "name": "cfc-discord-bot",
   "version": "1.0.0",
-  "description": "Generate Discord quizzes and schedule them!",
+  "description": "A little quirky Discord bot!",
   "main": "index.js",
   "scripts": {
+    "start":"node index.js",
+    "deploy": "node deploy-commands.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Michael Bracy",
+  "license": "GLWTS",
   "dependencies": {
     "discord.js": "^14.7.1",
     "winston": "^3.8.2"

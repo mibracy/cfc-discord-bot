@@ -6,7 +6,7 @@ const { createLogger, format, transports } = require(`winston`);
 const logger = createLogger({
     level: `info`,
     format: format.json(),
-    defaultMeta: { service: `quiz` },
+    defaultMeta: { service: `study` },
     transports: [
       //
       // - Write to all logs with level `info` and below to `console.log` 
@@ -22,8 +22,8 @@ const readFile = util.promisify(fs.readFile);
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName(`quiz`)
-		.setDescription(`A random quiz question. ***WARNING***  GHOST MODE Enabled!`),
+		.setName(`study`)
+		.setDescription(`A random quiz study question.`),
 	async execute(interaction) {
         const data = await readFile(`questions.json`);
         const questions = JSON.parse(data);
@@ -86,6 +86,6 @@ module.exports = {
         });
 
         await interaction.reply({ content: message, components: [answerButtons], ephemeral: true });
-        logger.info(`${interaction.user.id} IS LEARNING!`);
+        logger.info(`${interaction.user.id} IS STUDING!`);
 	},
 };
