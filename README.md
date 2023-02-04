@@ -3,8 +3,8 @@
 ## 🚨 Family Bot is WIP!
 
 ## Dockerfile Commands
-1. docker build --tag cfc-discord-bot .
-2. docker run -itd --network=host --restart=always cfc-discord-bot      
+1. docker build -t cfc-discord-bot:main .
+2. docker run -itd --network=host --restart=always cfc-discord-bot:main      
 
 ## How to Install/Run
 
