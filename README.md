@@ -1,6 +1,6 @@
-# Discord Quiz Bot
+# Costco Food Court Family Bot
 
-## 🚨 Discord Quiz Bot is WIP!
+## 🚨 Family Bot is WIP!
 
 ## Dockerfile Commands
 1. docker build --tag discord-quiz-bot .
@@ -23,6 +23,8 @@
 Replace appropriately. `clientId` is found on your Discord app's main page. `guildId` is the ID of the server you want to target (see [here](https://www.alphr.com/discord-find-server-id/) on how to find the guild ID). `token` is the token of the of bot.
 
 Running it should be fairly easy. For first time setup, run `npm deploy-commands.js`. This will upload the commands to the Discord server. You only need to do this once, or if you change the command structure or add/delete commands. To actually start the server, run `npm index.js`. You should see "Bot ready" if everything is configured right!
+
+`answer` is the index of the correct option. Order counts here!
 
 ## Creating Questions
 
