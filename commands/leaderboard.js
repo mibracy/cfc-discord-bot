@@ -9,7 +9,7 @@ module.exports = {
 			    .setDescription('Who Can Dance If He Wants To?')
                 .setRequired(true)),
 	async execute(interaction) {
-		const dance = interaction.options.getBoolean(`alt`);
+		const dance = interaction.options.getBoolean(`dance`);
 		if (dance === true){
 			await interaction.reply({content: `https://cdn.discordapp.com/attachments/962864335074496562/1063678344362729603/burkieDance.mp4`, ephemeral: true });
 		} else {
