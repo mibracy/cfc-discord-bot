@@ -3,8 +3,8 @@
 ## 🚨 Family Bot is WIP!
 
 ## Dockerfile Commands
-1. docker build --tag discord-quiz-bot .
-2. docker run -itd --network=host --restart=always discord-quiz-bot      
+1. docker build --tag cfc-discord-bot .
+2. docker run -itd --network=host --restart=always cfc-discord-bot      
 
 ## How to Install/Run
 
