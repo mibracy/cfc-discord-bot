@@ -25,6 +25,6 @@ module.exports = {
 		let count = data?.split(`${id} IS STUDYING`).length - 1;
 		count += data?.split(`${id} IS LEARNING`).length - 1;
 
-		await interaction.editReply({content: `<@${interaction.user.id}> 👀 \nNosey are we!\n\n<@${id}> has studied ${count} questions!`, ephemeral: !ephemeral});
+		await interaction.editReply({content: `Nosey are we <@${interaction.user.id}> 👀 \n\n<@${id}> has studied ${count} questions!`, ephemeral: !ephemeral});
 	},
 };
