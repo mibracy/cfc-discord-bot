@@ -22,7 +22,9 @@ module.exports = {
 		const user = interaction.options.getUser('user');
 		const ephemeral = interaction.options.getBoolean('public');
 		const id = user?.id;
-		const count = data?.split(`${id} IS STUDYING`).length - 1;
+		let count = data?.split(`${id} IS STUDYING`).length - 1;
+		count += data?.split(`${id} IS LEANRING`).length - 1;
+
 		await interaction.editReply({content: `<@${interaction.user.id}> 👀 Nosey little shit aren't you!\n\n<@${id}> has studied ${count} questions!`, ephemeral: !ephemeral});
 	},
 };

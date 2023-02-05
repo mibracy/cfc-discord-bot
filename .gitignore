@@ -2,6 +2,7 @@
 config.json
 console.log
 error.log
+commands/meet.js
 
 # Logs
 logs
